@@ -1,0 +1,640 @@
+export interface MediaItem {
+  id: string;
+  src: string;
+  title: string;
+  subtitle: string;
+  date: string;
+  venue?: string;
+  category: 'schedule-2026' | 'labour-law' | 'leadership-culture' | 'hr-communication' | 'studio';
+  secondaryCategory?: 'schedule-2026' | 'labour-law' | 'leadership-culture' | 'hr-communication';
+  hasEmbeddedCaption?: boolean;
+  fit?: 'cover' | 'contain';
+  aspect?: 'square' | 'landscape' | 'portrait';
+}
+
+export interface CertificateItem {
+  id: string;
+  src: string;
+  title: string;
+  issuer: string;
+  year: string;
+  category: 'hrdcorp' | 'isns' | 'nfnlp' | 'coaching-lab';
+  summary: string;
+}
+
+export interface ProgramGroup {
+  id: string;
+  title: string;
+  subtitle: string;
+  modules: string[];
+}
+
+export interface ClientOrg {
+  name: string;
+  location: string;
+  sector: 'Government & GLC' | 'Logistics & Ports' | 'Manufacturing & Industrial' | 'Healthcare & Education' | 'Corporate & Retail';
+}
+
+export interface ArticleItem {
+  id: string;
+  title: string;
+  category: string;
+  date: string;
+  readTime: string;
+  excerpt: string;
+  paragraphs: string[];
+}
+
+export const BRAND_LOGO = {
+  src: '/images/site/img_01_75035c4375.png',
+  alt: 'Fauzi Nordin Training, Coaching & Consulting Logo',
+};
+
+export const CONTACT_INFO = {
+  name: 'Mohd Fauzi bin Nordin',
+  tagline: 'Training | Coaching | Consulting',
+  address: '22M, Jalan Kosas 1/5, Taman Kosas, 68000 Ampang, Selangor',
+  tel: '03-4295 0398',
+  hp: '019-397 0002',
+  whatsappUrl: 'https://wa.me/60193970002',
+  email: 'fauzinordin@hrconsultant.my',
+};
+
+export const HERO_METRICS = [
+  { value: '30+', label: 'Tahun Pengalaman', detail: 'Kerajaan, Lebuhraya & Korporat' },
+  { value: '1,000+', label: 'Kes Disiplin & DI', detail: 'Siasatan Dalaman & Mahkamah Perusahaan' },
+  { value: '54+', label: 'Organisasi Klien', detail: 'Pelabuhan, GLC, Pembuatan & Universiti' },
+  { value: '13', label: 'Dokumen Pensijilan', detail: 'HRD Corp, ISNS USA, NFNLP USA & ICF' },
+];
+
+export const PORTRAITS: MediaItem[] = [
+  {
+    id: 'portrait-executive',
+    src: '/images/site/img_18_c19f3b23a3.jpg',
+    title: 'Mohd Fauzi Nordin — Strategic HR Consultant & Trainer',
+    subtitle: 'Executive & Industrial Relations Practice',
+    date: 'Studio Portrait',
+    category: 'studio',
+    aspect: 'portrait',
+  },
+  {
+    id: 'portrait-sports',
+    src: '/images/site/img_19_a785925448.jpg',
+    title: 'Mohd Fauzi Nordin — Sports & Performance Coach',
+    subtitle: 'Certified Sports & Performance Coach (NFNLP, USA)',
+    date: 'Studio Portrait',
+    category: 'studio',
+    aspect: 'portrait',
+  },
+  {
+    id: 'portrait-consultant',
+    src: '/images/site/img_20_3b45c7634f.jpg',
+    title: 'Mohd Fauzi Nordin — Associate Certified Meta-Coach',
+    subtitle: 'ISNS Meta-Coaching & Leadership Transformation',
+    date: 'Studio Portrait',
+    category: 'studio',
+    aspect: 'portrait',
+  },
+];
+
+export const JOURNEY_PHOTOS: MediaItem[] = [
+  {
+    id: 'journey-strategy',
+    src: '/images/site/img_15_505ed6a9f5.jpg',
+    title: 'Pemikiran Strategik & Pengurusan Konflik',
+    subtitle: 'Membina keupayaan membuat keputusan tegas dan adil dalam pengurusan organisasi',
+    date: 'My Journey',
+    category: 'studio',
+    aspect: 'landscape',
+  },
+  {
+    id: 'journey-consulting',
+    src: '/images/site/img_16_11a7935bda.jpg',
+    title: 'Perundingan Sistem & Polisi HR',
+    subtitle: 'Semakan kontrak pekerjaan, prosedur tatatertib serta nasihat undang-undang buruh',
+    date: 'My Journey',
+    category: 'studio',
+    aspect: 'landscape',
+  },
+  {
+    id: 'journey-coaching',
+    src: '/images/site/img_17_ebf221a2de.jpg',
+    title: 'Coaching, NLP & Transformasi Pasukan',
+    subtitle: 'Menggabungkan psikologi manusia dan pembinaan pasukan berprestasi tinggi',
+    date: 'My Journey',
+    category: 'studio',
+    aspect: 'landscape',
+  },
+];
+
+export const TRAINING_GALLERY: MediaItem[] = [
+  {
+    id: 'tr-tda-nov2026',
+    src: '/assets/aistudio/634af26a-e9ed-40a8-ae3d-fbf9c9134a31_8ed4f495.jpg',
+    title: 'Workshop on Employee Handbook Development & Employment Law Compliance',
+    subtitle: 'Technology Depository Agency (TDA)',
+    date: '19 November 2026',
+    venue: 'Cyberjaya, Selangor',
+    category: 'labour-law',
+    secondaryCategory: 'schedule-2026',
+    hasEmbeddedCaption: false,
+    fit: 'contain',
+    aspect: 'portrait',
+  },
+  {
+    id: 'tr-tawau-2026',
+    src: '/images/site/img_05_40f8f2d3ab.png',
+    title: 'Ordinan Buruh Sabah, Kontrak & Siasatan Dalaman',
+    subtitle: 'Borneo Royale Hotel, Tawau',
+    date: '20–21 April 2026',
+    venue: 'Tawau, Sabah',
+    category: 'schedule-2026',
+    hasEmbeddedCaption: false,
+    aspect: 'landscape',
+  },
+  {
+    id: 'tr-sitiawan-2026',
+    src: '/images/site/img_06_e4dd4c4b79.png',
+    title: 'Communication for Highway Operations Staff',
+    subtitle: 'Program Operasi & Komunikasi Lebuhraya',
+    date: '1–2 April 2026',
+    venue: 'Sitiawan, Perak',
+    category: 'schedule-2026',
+    hasEmbeddedCaption: false,
+    aspect: 'landscape',
+  },
+  {
+    id: 'tr-jandabaik-2026',
+    src: '/images/site/img_07_c210fe1b09.png',
+    title: 'Thinking Skills',
+    subtitle: 'Executive & Team Retreat Workshop',
+    date: '21–22 May 2026',
+    venue: 'Janda Baik, Bentong, Pahang',
+    category: 'schedule-2026',
+    hasEmbeddedCaption: false,
+    aspect: 'landscape',
+  },
+  {
+    id: 'tr-hino-2026',
+    src: '/images/site/img_04_37fc864e4a.png',
+    title: 'Respect for Others — Leadership in Practice',
+    subtitle: 'Hino Motors Manufacturing (Malaysia) Sdn Bhd',
+    date: '16 January 2026',
+    venue: 'Sendayan Tech Valley',
+    category: 'leadership-culture',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+  {
+    id: 'tr-labuan-2026',
+    src: '/images/site/img_09_006bf7f674.png',
+    title: 'HR Game Changer: Siasatan Dalaman, Kontrak & Pengiraan Gaji Tanpa Silap',
+    subtitle: 'Public Training — W.P. Labuan',
+    date: '9–10 February 2026',
+    venue: 'W.P. Labuan',
+    category: 'labour-law',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+  {
+    id: 'tr-adabi-2026',
+    src: '/images/site/img_10_6b64dbe0ff.png',
+    title: 'Self Motivation & Improvement at Work',
+    subtitle: 'Adabi Teluk Intan Sdn Bhd',
+    date: '14 January 2026',
+    venue: 'Teluk Intan, Perak',
+    category: 'leadership-culture',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+  {
+    id: 'tr-shahalam-2026',
+    src: '/images/site/img_11_a01cf9ee72.png',
+    title: 'HR Game Changer: Kontrak, Siasatan Dalaman & Pembayaran Gaji Tanpa Silap',
+    subtitle: 'Public Training — Shah Alam',
+    date: '7–8 January 2026',
+    venue: 'Shah Alam, Selangor',
+    category: 'labour-law',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+  {
+    id: 'tr-megah-2025',
+    src: '/images/site/img_02_1a8bead258.png',
+    title: 'Thriving at Work: Motivation, Adaptability & High-Performance Culture',
+    subtitle: 'Megah Inovative Sdn Bhd',
+    date: '3–4 December 2025',
+    venue: 'Tasik Kebun, Serendah',
+    category: 'leadership-culture',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+  {
+    id: 'tr-tawau-dec2025',
+    src: '/images/site/img_12_bc626fa8dd.png',
+    title: 'Ordinan Buruh Sabah (Pindaan) 2025 & Prosedur Siasatan Dalaman',
+    subtitle: 'Public Training — Tawau',
+    date: '11–12 December 2025',
+    venue: 'Tawau, Sabah',
+    category: 'labour-law',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+  {
+    id: 'tr-stargrocer-2025',
+    src: '/images/site/img_03_2724646218.png',
+    title: 'Building Excellence Core Value',
+    subtitle: 'Star Grocer Sdn Bhd',
+    date: '28–30 November 2025',
+    venue: 'Ehsan Sea View Hotel, Port Dickson',
+    category: 'leadership-culture',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+  {
+    id: 'tr-roca-2025',
+    src: '/images/site/img_08_9a4dffc5e8.png',
+    title: 'Employment Act 1955',
+    subtitle: 'Roca Malaysia Sdn Bhd',
+    date: '26–27 September 2025',
+    venue: 'Bistari Jaya, Selangor',
+    category: 'labour-law',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+  {
+    id: 'tr-markerry-2025',
+    src: '/images/site/img_13_11aa7bcda6.png',
+    title: 'Prosedur Pembuangan Pekerja & Siasatan Dalaman (Domestic Inquiry)',
+    subtitle: 'Markerry Manufacturing Sdn Bhd',
+    date: '11 August 2025',
+    venue: 'Sungai Petani, Kedah',
+    category: 'labour-law',
+    hasEmbeddedCaption: true,
+    aspect: 'square',
+  },
+];
+
+export const CERTIFICATIONS: CertificateItem[] = [
+  {
+    id: 'cert-hrdcorp',
+    src: '/images/site/img_22_4fccca3370.png',
+    title: 'HRD Corp Accredited Trainer',
+    issuer: 'Human Resource Development Corporation (ID: 401)',
+    year: '2024 – 2027',
+    category: 'hrdcorp',
+    summary: 'Pentauliahan rasmi untuk mengendalikan latihan korporat di bawah skim HRD Corp Malaysia.',
+  },
+  {
+    id: 'cert-hrdf-ttt',
+    src: '/images/site/img_21_682d9e7204.png',
+    title: 'Train The Trainer Exemption',
+    issuer: 'Pembangunan Sumber Manusia Berhad (HRDF)',
+    year: '2007',
+    category: 'hrdcorp',
+    summary: 'Sijil pengecualian Train The Trainer (TTT) yang diperakui sejak 19 November 2007.',
+  },
+  {
+    id: 'cert-gaans',
+    src: '/images/site/img_23_2304d4e7ec.png',
+    title: 'Master Trainer — Global Association of Neuro-Synergy',
+    issuer: 'GAANS, Auckland, New Zealand',
+    year: '2018',
+    category: 'isns',
+    summary: 'Tamat program intensif 3 bulan Master Trainer dengan standard penyampaian dan pentauliahan tertinggi.',
+  },
+  {
+    id: 'cert-isns-meta',
+    src: '/images/site/img_24_f832679cd5.png',
+    title: 'Meta-Master Practitioner & NLP-NS Practitioner',
+    issuer: 'International Society of Neuro-Semantics (ISNS, USA)',
+    year: '2012 & 2015',
+    category: 'isns',
+    summary: 'Pensijilan penguasaan Neuro-Semantics & Meta-NLP (L. Michael Hall, Ph.D. & Colin Cox).',
+  },
+  {
+    id: 'cert-acmc',
+    src: '/images/site/img_29_610820c1af.png',
+    title: 'Associate Certified Meta-Coach (ACMC) & NLP Coach',
+    issuer: 'ISNS / Meta-Coach Foundation & NFNLP USA',
+    year: '2013 & 2014',
+    category: 'coaching-lab',
+    summary: '96 jam latihan Coaching Mastery dalam Meta-States, Matrix Model & Axes of Change.',
+  },
+  {
+    id: 'cert-icf-oum',
+    src: '/images/site/img_30_66b9a22a79.png',
+    title: 'Certified Master Performance Coach & ICF Member',
+    issuer: 'Coach Mastery Academy (ACSTH) & Open University Malaysia',
+    year: '2010',
+    category: 'coaching-lab',
+    summary: 'Kompetensi Teras ICF (62 jam latihan + 60 jam bimbingan prestasi di OUM).',
+  },
+  {
+    id: 'cert-nfnlp-trainer',
+    src: '/images/site/img_26_9ac5b07531.png',
+    title: 'Master & Professional Trainer & Learning Facilitator',
+    issuer: 'National Federation of NLP (NFNLP, Florida USA)',
+    year: '2018 & 2019',
+    category: 'nfnlp',
+    summary: 'Pengiktirafan tahap lanjutan dalam pengucapan awam dan fasilitasi pembelajaran berasaskan NLP.',
+  },
+  {
+    id: 'cert-nfnlp-prac',
+    src: '/images/site/img_25_2f59332b9c.png',
+    title: 'Master & Basic Practitioner of NLP',
+    issuer: 'National Federation of NLP (NFNLP, Florida USA)',
+    year: '2008 & 2010',
+    category: 'nfnlp',
+    summary: 'Pentauliahan asas dan lanjutan teknik Neuro-Linguistic Programming oleh Dr. William D. Horton.',
+  },
+  {
+    id: 'cert-abnlp-comm',
+    src: '/images/site/img_31_f1ab9fc21c.png',
+    title: 'Certified NLP Coach & Master Communication Consultant',
+    issuer: 'American Board of NLP (ABNLP) & NFNLP USA',
+    year: '2012 & 2019',
+    category: 'coaching-lab',
+    summary: '130 jam latihan intensif Coaching ABNLP serta Master Neurolinguistic Communication Consultant.',
+  },
+  {
+    id: 'cert-nfnlp-profcoach',
+    src: '/images/site/img_32_aa84b2e721.png',
+    title: 'Neurolinguistic Communication Consultant & Professional Coach',
+    issuer: 'National Federation of NLP (NFNLP, USA)',
+    year: '2015 & 2019',
+    category: 'nfnlp',
+    summary: 'Aplikasi komunikasi berpengaruh, rundingan, dan bimbingan matlamat profesional.',
+  },
+  {
+    id: 'cert-nfnlp-hypno',
+    src: '/images/site/img_27_5c46c76229.png',
+    title: 'NeuroLinguistic Hypnotherapist & Sports Performance Specialist',
+    issuer: 'National Federation of NLP (NFNLP, USA)',
+    year: '2015',
+    category: 'nfnlp',
+    summary: 'Kepakaran hipnoterapi NLP serta teknik peningkatan prestasi sukan dan eksekutif.',
+  },
+  {
+    id: 'cert-nfnlp-addict',
+    src: '/images/site/img_28_a1f28298e3.png',
+    title: 'Hypno-Addictionologist & NeuroLinguistic Addictionologist',
+    issuer: 'National Federation of NLP (NFNLP, USA)',
+    year: '2017',
+    category: 'nfnlp',
+    summary: 'Pendekatan gabungan NLP dan psikologi perubahan tingkah laku untuk pemulihan tabiat.',
+  },
+  {
+    id: 'cert-lab-profile',
+    src: '/images/site/img_33_0187bd3a7a.png',
+    title: 'Words That Change Minds — LAB Profile Practitioner',
+    issuer: 'Success Strategies (Shelle Rose Charvet, Canada)',
+    year: '2011',
+    category: 'coaching-lab',
+    summary: 'Pentauliahan antarabangsa Language & Behaviour Profile untuk temuduga, kepimpinan & pengaruh.',
+  },
+];
+
+export const JOURNEY_PILLARS = [
+  {
+    number: '01',
+    title: 'Disiplin & Siasatan Dalaman (Domestic Inquiry)',
+    description:
+      'Mengendalikan kes salah laku pekerja secara profesional, tersusun dan patuh undang-undang — mengurangkan risiko kepada organisasi.',
+  },
+  {
+    number: '02',
+    title: 'Labour Law & Industrial Relations',
+    description:
+      'Memberikan panduan strategik dalam undang-undang buruh dan perhubungan perusahaan untuk mengelakkan konflik dan kes mahkamah.',
+  },
+  {
+    number: '03',
+    title: 'HR Systems & Policy Development',
+    description:
+      'Membina polisi dan sistem HR yang jelas, praktikal dan mudah dilaksanakan oleh pengurusan serta penyelia organisasi.',
+  },
+  {
+    number: '04',
+    title: 'Coaching & Human Transformation',
+    description:
+      'Meningkatkan prestasi individu dan pasukan melalui pendekatan Meta-Coaching, NLP dan perubahan mindset.',
+  },
+];
+
+export const PROGRAM_GROUPS: ProgramGroup[] = [
+  {
+    id: 'hr',
+    title: 'Pengurusan Sumber Manusia',
+    subtitle: 'Sistem HR, pemilihan bakat dan struktur ganjaran',
+    modules: [
+      'Pengurusan Sumber Manusia Untuk Kemajuan Organisasi',
+      'Pengurusan Gaji dan Faedah yang Efektif',
+      'Proses Pemilihan dan Kemahiran Temuduga dengan NLP (Neuro Linguistic Programming)',
+      'Pengurusan Latihan secara berkesan',
+      'On the Job Training',
+    ],
+  },
+  {
+    id: 'labour',
+    title: 'Undang-undang Buruh & Perhubungan Perusahaan',
+    subtitle: 'Pematuhan Akta Kerja 1955, Ordinan Buruh Sabah & Domestic Inquiry',
+    modules: [
+      'Akta Kerja 1955 & Peraturan-peraturan dan perintah',
+      'Positif Disiplin, Salahlaku dan Siasatan Dalaman (Domestic Inquiry)',
+      'Prosedur Disiplin dan Rungutan / Aduan',
+      'Tugas dan tanggungjawab Pengerusi dan Ahli-ahli Panel Siasatan Dalaman Disiplin (Domestic Inquiry)',
+      'Bagaimana cara-cara untuk mengelak kes pembuangan kerja dari di rujuk ke Mahkamah Perusahaan',
+      'Pembuangan kerja – Kenapa, Bagaimana, Kesan dan Penyelesaiannya apabila pekerja yang dibuang mengambil tindakan keatas majikannya',
+      'Cara-cara Mengurus Pekerja Yang Bermasalah',
+      'Undang-undang Buruh dan Pengurusan Sumber Manusia',
+      'Implementasi Undang-undang Buruh Secara Berkesan',
+      'Pengurusan Cuti dan Ketidakhadiran',
+    ],
+  },
+  {
+    id: 'nlp',
+    title: 'Pengurusan & Neuro Linguistic Programming (NLP)',
+    subtitle: 'Aplikasi Neuro-Semantics & Language Behaviour Profile',
+    modules: [
+      'NLP di dalam Pengurusan & Kehidupan',
+      'Implementasi NLP di dalam Latihan',
+      'Self-Leadership dengan NLP dan Neuro Semantics',
+      'Memperkasa Pekerja Untuk Kejayaan Organisasi',
+      'Words That Change Minds – Language & Behaviour Profile',
+    ],
+  },
+  {
+    id: 'coaching-leadership',
+    title: 'Coaching, Kepimpinan & Pembangunan Organisasi',
+    subtitle: 'Peningkatan produktiviti, penyeliaan & pembinaan pasukan',
+    modules: [
+      'Coaching untuk Prestasi',
+      'Mentoring & Coaching',
+      'Kaunseling dan coaching untuk peningkatan prestasi dan produktiviti pekerja',
+      'Kemahiran Penyeliaan',
+      'Mesra Pelanggan / Perkhidmatan Pelanggan',
+      'Kursus Persediaan Untuk Bersara',
+      'Kecemerlangan Diri dan Organisasi',
+      'Motivasi dan Sikap Kerja Positif',
+      'Kursus Keusahawanan',
+      'Pembinaan Pasukan / Teambuilding',
+    ],
+  },
+  {
+    id: 'cert-programs',
+    title: 'Program Pensijilan Antarabangsa (ISNS & NFNLP)',
+    subtitle: 'Laluan pentauliahan profesional bertaraf antarabangsa',
+    modules: [
+      'ISNS USA: Certified Neuro-Semantics Basic Practitioner (Meta-NLP Practitioner Certification)',
+      'ISNS USA: Certified Coaching Genius',
+      'ISNS USA: Certified Self Leadership',
+      'ISNS USA: Certified Coaching Essentials',
+      'NFNLP USA: Certified Basic NLP Practitioner',
+      'NFNLP USA: Certified Master NLP Practitioner',
+      'NFNLP USA: Certified NLP Coach',
+    ],
+  },
+];
+
+export const CLIENT_ORGS: ClientOrg[] = [
+  { name: 'Kementerian Dalam Negeri', location: 'Putrajaya / Kuala Lumpur', sector: 'Government & GLC' },
+  { name: 'Projek Lebuhraya Usahasama Berhad (PLUS)', location: 'Selangor', sector: 'Government & GLC' },
+  { name: 'Tenaga Nasional Berhad', location: 'Kuala Lumpur', sector: 'Government & GLC' },
+  { name: 'TM Berhad', location: 'Kuala Lumpur', sector: 'Government & GLC' },
+  { name: 'Dewan Bandaraya Kuala Lumpur', location: 'Kuala Lumpur', sector: 'Government & GLC' },
+  { name: 'Majlis Perbandaran Kuantan', location: 'Pahang', sector: 'Government & GLC' },
+  { name: 'UDA Holdings Berhad', location: 'Kuala Lumpur', sector: 'Government & GLC' },
+  { name: 'Percetakan Nasional Malaysia Berhad', location: 'Kuala Lumpur', sector: 'Government & GLC' },
+  { name: 'Perbadanan Kemajuan Negeri Pahang', location: 'Pahang', sector: 'Government & GLC' },
+  { name: 'Perbadanan Kemajuan Negeri Melaka', location: 'Melaka', sector: 'Government & GLC' },
+  { name: 'Perbadanan Memajukan Iktisad Negeri Terengganu (PERMINT)', location: 'Terengganu', sector: 'Government & GLC' },
+  { name: 'Felda Security Services Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Government & GLC' },
+  { name: 'Syarikat Air Terengganu Sdn. Bhd.', location: 'Terengganu', sector: 'Government & GLC' },
+  { name: 'Bintulu Port Sdn. Bhd.', location: 'Sarawak', sector: 'Logistics & Ports' },
+  { name: 'Penang Port Sdn. Bhd.', location: 'Penang', sector: 'Logistics & Ports' },
+  { name: 'Northport Sdn. Bhd.', location: 'Selangor', sector: 'Logistics & Ports' },
+  { name: 'Westport Sdn. Bhd.', location: 'Selangor', sector: 'Logistics & Ports' },
+  { name: 'Abacus Distribution Systems (M) Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Logistics & Ports' },
+  { name: 'Sime Darby Industrial Sdn. Bhd.', location: 'Selangor', sector: 'Manufacturing & Industrial' },
+  { name: 'Hartalega Sdn. Bhd.', location: 'Selangor', sector: 'Manufacturing & Industrial' },
+  { name: 'Hartalega NGC Sdn. Bhd.', location: 'Selangor', sector: 'Manufacturing & Industrial' },
+  { name: 'Hitachi', location: 'Bangi, Selangor', sector: 'Manufacturing & Industrial' },
+  { name: 'Tan Chong Motor Assemblies', location: 'Kuala Lumpur', sector: 'Manufacturing & Industrial' },
+  { name: 'White Horse Ceramic Sdn. Bhd.', location: 'Johor Bahru', sector: 'Manufacturing & Industrial' },
+  { name: 'SME Ordnance Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Manufacturing & Industrial' },
+  { name: 'Gunung Kabel Sdn. Bhd.', location: 'Negeri Sembilan', sector: 'Manufacturing & Industrial' },
+  { name: 'Everts (Malaysia) Sdn. Bhd.', location: 'Melaka', sector: 'Manufacturing & Industrial' },
+  { name: 'Bright Glory Industries Sdn. Bhd.', location: 'Johor Bahru', sector: 'Manufacturing & Industrial' },
+  { name: 'Kobakin (M) Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Manufacturing & Industrial' },
+  { name: 'Panel Technologies Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Manufacturing & Industrial' },
+  { name: 'KESEDAR Perkilangan Sdn. Bhd.', location: 'Kelantan', sector: 'Manufacturing & Industrial' },
+  { name: 'Pesama Timber Corp. Sdn. Bhd.', location: 'Terengganu', sector: 'Manufacturing & Industrial' },
+  { name: 'Kuantan Wire Products Sdn. Bhd.', location: 'Pahang', sector: 'Manufacturing & Industrial' },
+  { name: 'Mascotwood Sdn. Bhd.', location: 'Terengganu', sector: 'Manufacturing & Industrial' },
+  { name: 'Alloy Consolidated Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Manufacturing & Industrial' },
+  { name: 'Pharmaniaga Sdn. Bhd.', location: 'Selangor', sector: 'Healthcare & Education' },
+  { name: 'Hospital Az-Zahrah Sdn. Bhd.', location: 'Selangor', sector: 'Healthcare & Education' },
+  { name: 'Universiti Malaya', location: 'Kuala Lumpur', sector: 'Healthcare & Education' },
+  { name: 'UTM Space Sdn. Bhd.', location: 'Johor Bahru', sector: 'Healthcare & Education' },
+  { name: 'Pahang Skills Development Centre', location: 'Pahang', sector: 'Healthcare & Education' },
+  { name: 'Malaysian Assurance Alliance Berhad (MAA)', location: 'Kuala Lumpur', sector: 'Corporate & Retail' },
+  { name: 'GCH Retail (M) Sdn. Bhd.', location: 'Shah Alam, Selangor', sector: 'Corporate & Retail' },
+  { name: 'Courts Mammoth Bhd', location: 'Kuala Lumpur', sector: 'Corporate & Retail' },
+  { name: 'Landmarks Land & Properties Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Corporate & Retail' },
+  { name: 'Kemayan Resort Villa Sdn. Bhd.', location: 'Terengganu', sector: 'Corporate & Retail' },
+  { name: 'Harta Maintenance Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Corporate & Retail' },
+  { name: 'Franky Construction Sdn. Bhd.', location: 'Pahang', sector: 'Corporate & Retail' },
+  { name: 'Flairis (K.L.) Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Corporate & Retail' },
+  { name: 'Harian (Zulfazdli) Sdn. Bhd.', location: 'Kuala Lumpur', sector: 'Corporate & Retail' },
+  { name: 'Talent Suites Sdn. Bhd.', location: 'Penang', sector: 'Corporate & Retail' },
+  { name: 'OSRA Management Sdn. Bhd.', location: 'Selangor', sector: 'Corporate & Retail' },
+  { name: 'Excel Mind Sdn. Bhd.', location: 'Selangor', sector: 'Corporate & Retail' },
+  { name: 'Times Management Sdn. Bhd.', location: 'Selangor', sector: 'Corporate & Retail' },
+  { name: 'Comfori Sdn. Bhd.', location: 'Selangor', sector: 'Corporate & Retail' },
+];
+
+export const ARTICLES: ArticleItem[] = [
+  {
+    id: 'satu-rumah-seorang-coach',
+    title: 'Satu Rumah Seorang Coach: Asas Sebuah Keluarga Berfungsi Tinggi',
+    category: 'Coaching & Keluarga',
+    date: '1 June 2026',
+    readTime: '4 min bacaan',
+    excerpt:
+      'Setiap rumah perlu mempunyai sekurang-kurangnya seorang pembimbing yang tahu mendengar tanpa menghakimi, bertanya tanpa menyindir, dan membimbing tanpa memaksa.',
+    paragraphs: [
+      'Setiap manusia membesar dalam sebuah rumah. Ada rumah yang sunyi walaupun penuh penghuni. Ada rumah yang bising tetapi kosong jiwa. Ada juga rumah yang sederhana dari segi fizikal, namun kaya dengan ketenangan, kefahaman dan kasih sayang. Perbezaannya bukan pada saiz rumah, bukan juga pada tahap ekonomi semata-mata, tetapi pada cara manusia di dalam rumah itu saling berhubung dan membimbing antara satu sama lain.',
+      'Dalam dunia moden hari ini, ramai ibu bapa bekerja keras menyediakan keperluan fizikal keluarga — makanan, pendidikan, keselamatan dan keselesaan. Namun, dalam kesibukan tersebut, aspek pembinaan jiwa, emosi dan pemikiran sering terabai. Rumah akhirnya menjadi tempat singgah, bukan tempat membesar.',
+      'Di sinilah lahirnya satu keperluan baharu — setiap rumah perlu mempunyai sekurang-kurangnya seorang coach. Bukan coach profesional. Bukan kaunselor bertauliah. Tetapi seorang insan yang tahu mendengar tanpa menghakimi, bertanya tanpa menyindir, dan membimbing tanpa memaksa. Inilah asas kepada konsep “Satu Rumah Seorang Coach.”',
+      'Apakah Maksud “Satu Rumah Seorang Coach”? Ia bukanlah satu slogan kosong atau trend motivasi semata-mata. Ia adalah satu pendekatan hidup dan satu cara berfikir tentang peranan kita dalam keluarga. Dalam setiap rumah, perlu ada sekurang-kurangnya seorang individu yang berperanan sebagai pembimbing berasaskan pendekatan coaching — seseorang yang membantu ahli keluarga lain berfikir, memahami diri, mengurus emosi dan membuat keputusan dengan lebih matang.',
+      'Coach dalam rumah ini boleh jadi ayah, ibu, pasangan, anak dewasa, atau sesiapa sahaja yang mempunyai kesedaran dan kemahiran asas coaching. Peranan coach ini bukan untuk mengawal, tetapi untuk memudah cara pertumbuhan. Bukan untuk menentukan jawapan, tetapi membantu ahli keluarga menemui jawapan mereka sendiri.',
+      'Nota: Sebuah buku berjudul "Satu Rumah Seorang Coach" akan berada di pasaran tidak lama lagi.',
+    ],
+  },
+  {
+    id: 'apa-itu-ego',
+    title: 'Apa Itu Ego?',
+    category: 'Psikologi & Pembangunan Diri',
+    date: '1 June 2026',
+    readTime: '3 min bacaan',
+    excerpt:
+      'Memahami perbezaan antara keakuan yang menghalang pertumbuhan dengan konsep kerendahan hati, tawaduk, ikhlas dan kesedaran diri.',
+    paragraphs: [
+      'Ego ialah rasa keakuan atau identiti diri seseorang — bagaimana seseorang melihat dirinya sendiri, kepentingannya, dan peranannya berbanding orang lain.',
+      'Dalam penggunaan harian, ego biasanya merujuk kepada keadaan apabila seseorang terlalu mementingkan diri sendiri, sukar menerima kesalahan, mahu sentiasa betul atau dipuji, dan sukar menerima pandangan orang lain. Contoh mudah: “Dia tak mahu mengaku salah kerana egonya terlalu tinggi.”',
+      'Namun dari sudut psikologi (contohnya teori Freud), ego adalah bahagian minda yang membantu kita mengimbangi keinginan diri dengan realiti.',
+      'Tiada satu perkataan tunggal yang benar-benar bertentangan dengan ego, tetapi beberapa konsep utama yang berlawanan dengannya ialah: Rendah diri (humility) — tidak merasa diri lebih hebat daripada orang lain serta sedia belajar dan menerima teguran; Tawaduk — rendah hati walaupun mempunyai kelebihan; Ikhlas — melakukan sesuatu tanpa mencari pengiktirafan; dan Kesedaran diri (self-awareness) — sedar kelemahan dan kekuatan diri tanpa bermegah.',
+    ],
+  },
+  {
+    id: 'jentera-pengeluar-makna',
+    title: 'Kita Adalah Jentera Pengeluar Makna',
+    category: 'NLP & Neuro-Semantics',
+    date: 'Artikel Pilihan',
+    readTime: '4 min bacaan',
+    excerpt:
+      'Kita tidak boleh tidak berkomunikasi, dan kita tidak boleh tidak memberi makna kepada setiap rangsangan yang memasuki minda kita.',
+    paragraphs: [
+      'Kita tidak boleh tidak berkomunikasi. Ini adalah andaian di dalam NLP yang terbukti akan kehebatannya. Selagi kita berada di dalam keadaan sedar, kita tidak berhenti-henti berkomunikasi. Di dalam konteks ini kita bukan sahaja berkomunikasi apabila mengeluarkan perkataan kepada orang lain; kita juga berkomunikasi apabila bersendirian.',
+      'Setiap benda yang dicapai oleh mata penglihatan kita, setiap bunyi yang masuk ke telinga kita, setiap sentuhan pada tubuh badan, setiap bau dan rasa — semuanya kita berikan makna, dan makna itu adalah satu bentuk komunikasi dengan diri sendiri. Begitu juga dengan perasaan kita.',
+      'Secara ringkasnya, kita berkomunikasi sama ada dengan orang lain atau diri kita sendiri ketika menonton TV, membaca buku, mendengar muzik, berehat di tepi pantai mahupun merentas hutan.',
+      'Persoalannya ialah apakah makna yang kita beri semasa berkomunikasi? Sebab itulah dua orang yang menaiki kereta yang sama atau menikmati hidangan yang sama memberi makna yang berbeza. Manusia memberi makna yang berbeza terhadap stimulus yang diterimanya.',
+      'Sebenarnya kita adalah jentera pengeluar makna. Persoalan penting yang perlu kita tanya ialah: adakah kita memberi makna yang memperkasakan diri kita, atau makna yang membuat kita merudum?',
+    ],
+  },
+  {
+    id: 'aggression-in-leadership',
+    title: 'Aggression in Leadership: Power or Insecurity',
+    category: 'Executive Coaching',
+    date: 'Leadership Insight',
+    readTime: '3 min read',
+    excerpt:
+      'Power forces performance. Trust sustains it. Why emotional regulation is executive discipline rather than softness.',
+    paragraphs: [
+      'In leadership coaching, one pattern appears repeatedly: high-performing executives who believe aggression equals strength. Sharp tone. Relentless pressure. Zero tolerance for dissent.',
+      'Yes, aggression can produce short-term results. It drives urgency. It forces compliance. It accelerates decisions. But it also erodes trust.',
+      'Through coaching conversations, many leaders begin to realize a hard truth: people may obey aggressive leaders, but they rarely commit to them. Compliance is not engagement. Fear is not alignment. And pressure is not culture.',
+      'Strong leadership is not loud. It is regulated. The most effective leaders I coach are decisive without being destructive. They are firm without being hostile. They challenge performance without humiliating people. They understand that emotional control is not softness—it is executive discipline.',
+      'Aggression is often a reaction. Leadership is a choice. When leaders shift from dominating conversations to creating clarity, and from demanding results to inspiring ownership, performance does not drop—it stabilizes and scales.',
+      'In leadership coaching, the goal is not to make leaders softer. It is to make them stronger, more self-aware, and strategically intentional. Because in the long run: Power forces performance. Trust sustains it.',
+    ],
+  },
+  {
+    id: 'constructive-dismissal-surat-cd',
+    title: 'Surat Berhenti Kerja Bagi Tujuan Pembuangan Kerja Secara Konstruktif (Constructive Dismissal)',
+    category: 'Undang-undang Buruh',
+    date: 'Kajian Kes 2021 & 2024',
+    readTime: '5 min bacaan',
+    excerpt:
+      'Kepentingan isi kandungan Surat Berhenti Kerja / CD berdasarkan kes Sanbos (Malaysia) Sdn Bhd [2021] dan Award 425 Tahun 2024.',
+    paragraphs: [
+      '1. Pembuangan kerja secara konstruktif (Constructive Dismissal atau CD) berlaku apabila pekerja menganggap dirinya dibuang kerja kerana pelanggaran kontrak asas oleh majikan, dan bukannya majikan secara langsung membuang pekerja tersebut.',
+      '2. Tuntutan CD akan diteliti secara khusus melalui isi kandungan Surat Berhenti Kerja atau Surat CD tersebut. Itu adalah asas utama yang menentukan kekuatan kes di Mahkamah Perusahaan.',
+      '3. Mahkamah di Malaysia menetapkan bahawa pekerja perlu membuktikan majikan melalui kelakuannya telah melanggar intipati asas kontrak pekerjaan, atau menunjukkan niat untuk tidak lagi terikat dengan terma-terma penting kontrak.',
+      '4. Dalam kes Sanbos (Malaysia) Sdn Bhd v. Gan Soon Huat [2021] 6 CLJ 700; [2021] 3 ILR 11, Mahkamah Rayuan menegaskan bahawa Mahkamah Perusahaan hanya perlu meneliti isi kandungan Surat Berhenti Kerja / Surat CD yang dikemukakan kepada majikan; alasan lain yang tidak dinyatakan dalam surat tersebut adalah tidak relevan.',
+      '5. Dalam keputusan Award 425 Tahun 2024, seorang pekerja yang menuntut CD hanya menyatakan tiga sebab di dalam suratnya: (a) masalah sakit belakang yang semakin berlarutan, (b) kerap mengambil cuti sakit penghospitalan akibat sakit belakang, dan (c) jarak tempat kerja baharu yang jauh daripada rumahnya. Oleh kerana hanya alasan itu yang dinyatakan dalam surat peletakan jawatan, tuntutan CD beliau gagal di Mahkamah Perusahaan.',
+      '6. Pembelajaran Utama: Isi kandungan Surat Berhenti Kerja / CD amat kritikal bagi kedua-dua majikan dan pekerja dalam menentukan kewujudan elemen Constructive Dismissal.',
+    ],
+  },
+];
