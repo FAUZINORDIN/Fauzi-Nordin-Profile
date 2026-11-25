@@ -295,6 +295,18 @@ export const TRAINING_GALLERY: MediaItem[] = [
     aspect: 'landscape',
   },
   {
+    id: 'tr-kuching-cpc-aug2026',
+    src: '/assets/aistudio/b60bafc1-cd5f-49b9-9e29-fcbe0997ec23_0545895c.JPG',
+    title: 'Certified Professional Coach (Pensijilan Antarabangsa dari USA)',
+    subtitle: 'Raia Hotel, Kuching',
+    date: '19–21 Ogos 2026',
+    venue: 'Kuching, Sarawak',
+    category: 'leadership-culture',
+    secondaryCategory: 'schedule-2026',
+    hasEmbeddedCaption: false,
+    aspect: 'landscape',
+  },
+  {
     id: 'tr-tawau-2026',
     src: '/images/site/img_05_40f8f2d3ab.png',
     title: 'Ordinan Buruh Sabah, Kontrak & Siasatan Dalaman',
