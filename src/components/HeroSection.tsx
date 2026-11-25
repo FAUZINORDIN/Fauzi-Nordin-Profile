@@ -62,16 +62,16 @@ export function HeroSection({ onOpenLightbox }: HeroSectionProps) {
                 className="font-[family-name:var(--font-display)] font-semibold tracking-tight text-[#0F223A] text-balance leading-[1.12] mb-6"
                 style={{ fontSize: 'clamp(2.25rem, 4vw, 3.6rem)' }}
               >
-                Strategik HR, Undang-Undang Buruh &amp; Transformasi Kepimpinan.
+                Strategik HR, Undang-Undang Buruh, Coaching &amp; Transformasi Kepimpinan.
               </h1>
 
               <p className="text-base md:text-lg text-[#374151] leading-relaxed max-w-2xl mb-8">
-                Menggabungkan lebih 30 tahun pengalaman pengurusan sumber manusia di lapangan — dari{' '}
+                Menggabungkan lebih 30 tahun pengalaman di dalam pengurusan sumber manusia di lapangan — dari{' '}
                 <span className="font-medium text-[#0F223A]">Kementerian Dalam Negeri</span>,{' '}
                 <span className="font-medium text-[#0F223A]">Lembaga Lebuhraya Malaysia</span> dan{' '}
                 <span className="font-medium text-[#0F223A]">PLUS Berhad</span> — bersama pendekatan{' '}
-                <span className="font-medium text-[#0F223A]">Neuro-Semantics, NLP &amp; Meta-Coaching</span>{' '}
-                untuk membina organisasi yang patuh undang-undang, berdisiplin dan berprestasi tinggi.
+                <span className="font-medium text-[#0F223A]">Neuro-Semantics, NLP, Thinking Skills dan Coaching</span>{' '}
+                untuk membina organisasi yang patuh undang-undang, berdisiplin dan berprestasi tinggi serta meningkatkan produktiviti.
               </p>
             </div>
 
