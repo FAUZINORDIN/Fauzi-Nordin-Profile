@@ -120,15 +120,17 @@ export function HeroSection({ onOpenLightbox }: HeroSectionProps) {
                 fallbackTitle={mainPortrait.title}
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
               <div className="absolute bottom-0 inset-x-0 p-5 md:p-6 flex items-end justify-between gap-4 text-white">
                 <div>
-                  <p className="text-xs text-white/80 font-medium">
-                    HRD Corp Accredited Trainer · ACMC (ISNS, USA)
+                  <p className="font-[family-name:var(--font-display)] text-lg font-semibold tracking-wide">
+                    MOHD FAUZI NORDIN
                   </p>
-                  <p className="font-[family-name:var(--font-display)] text-lg font-semibold mt-0.5">
-                    Mohd Fauzi bin Nordin
-                  </p>
+                  <div className="mt-1 space-y-0.5 text-[11px] sm:text-xs text-white/90 font-medium leading-snug">
+                    <p>Certified HRD Corp Accredited Trainer - HRD Corp</p>
+                    <p>Certified Trainer of Neuro-Semantics &amp; NLP - ISNS, USA</p>
+                    <p>Certified Trainer of Professional Coach - NFNLP, USA</p>
+                  </div>
                 </div>
                 <span className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-sm border border-white/25 inline-flex items-center justify-center shrink-0">
                   <Expand className="w-4 h-4" aria-hidden="true" />
